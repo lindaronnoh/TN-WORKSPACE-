@@ -1,0 +1,317 @@
+<html>
+    <title>This is Javascript</title>
+   <head>
+    <script type = "text/javascript">
+        <!--
+           function concatenate(first,last) {
+              var full;
+              full=first+last;
+              return full
+           }
+           function secondFunction(){
+            var result;
+            result=concatenate('Rehema','Achieng');
+            document.write(result);
+           }
+        // + Addition
+        // - subtraction, *multiplication, / division, ++ increment, -- decrement, % modulus,<,<=,>=, ==
+        var a=0;
+        var b=30;
+        var c=15;
+        var linebreak="<br/>";
+
+
+        document.write("b-c=");
+        result=b-c;
+        document.write(result);
+        document.write(linebreak);
+       
+        document.write("a+b=");
+        result=a+b;
+        document.write(result);
+        document.write(linebreak);
+
+
+        document.write("b/a=");
+        result=b/a;
+        document.write(result);
+        document.write(linebreak);
+
+
+        document.write("a+b-c=");
+        result=a+b-c;
+        document.write(result);
+        document.write(linebreak);
+
+
+     </script>      
+   </head>
+   <body style="
+    background-position:center;
+    font-size:150%;
+    border-radius:50%;
+    font-family: Arial, Helvetica, sans-serif;">
+   <h1> This is how we great people in programming</h1>
+   <p> I am Happy to be here today and to be able to sing this song with you</p>
+   <form>
+      <input type = "button" onclick = "secondFunction()" value = "Call Function" />
+   </form>
+   </body>  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<strong><body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             text-align: center;
+             background-color: aqua;">
+    <h1> The registration for the Ajira club formation</h1>
+    <p> This is a registration requirement for the Ajira club in the school</p>
+    <script type="text/javascript">
+    var count=1;
+    document.write("staring loop"+"<br/>");
+     while(count<10){
+        document.write("Number:"+count+"<br/>")
+        count++;
+     }
+     document.write("Loop ended!");
+    </script>
+</body></strong>
+
+
+CODE THREE
+
+<html>
+    <head>
+        <script>
+            window.onload = function () {
+ 
+  var seconds = 00;
+  var tens = 00;
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var buttonStart = document.getElementById('button-start');
+  var buttonStop = document.getElementById('button-stop');
+  var buttonReset = document.getElementById('button-reset');
+  var Interval ;
+
+
+  buttonStart.onclick = function() {
+   
+    clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+  }
+ 
+    buttonStop.onclick = function() {
+       clearInterval(Interval);
+  }
+ 
+
+
+  buttonReset.onclick = function() {
+     clearInterval(Interval);
+    tens = "00";
+    seconds = "00";
+    appendTens.innerHTML = tens;
+    appendSeconds.innerHTML = seconds;
+  }
+ 
+   
+ 
+  function startTimer () {
+    tens++;
+   
+    if(tens <= 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+   
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+     
+    }
+   
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+   
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+ 
+  }
+ 
+
+
+}
+        </script>
+    </head>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <h2>Vanilla JavaScript Stopwatch</h2>
+        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+        </div>
+        <style>
+        body {
+        background:$base-color;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        height:100%;
+        }
+       
+        .wrapper {
+        width: 800px;
+        margin: 30px auto;
+        color:$white;
+        text-align:center;
+        }
+       
+        h1, h2, h3 {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 100;
+          font-size: 2.6em;
+          text-transform: uppercase;
+        }
+       
+        #seconds, #tens{
+          font-size:2em;
+        }
+       
+        button{
+        @include corners (5px);
+        background:$base-color;
+        color:$white;
+        border: solid 1px $white;
+        text-decoration:none;
+        cursor:pointer;
+        font-size:1.2em;
+        padding:18px 10px;
+        width:180px;
+        margin: 10px;
+         outline: none;
+          &:hover{
+            @include transition;
+            background:$white;
+            border: solid 1px $white;
+            color:$base-color;
+            }
+        }
+        </style>
+               
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CODE FOUR
+<html>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+<style>
+    body {
+    background: black;
+}
+
+
+.clock {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 20px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+</style>
+<script>
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+   
+    if(h == 0){
+        h = 12;
+    }
+   
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+   
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+   
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+   
+    setTimeout(showTime, 1000);
+   
+}
+
+
+showTime();
+</script>
+</html>
+
+
+
